@@ -23,8 +23,8 @@ const getRandomePalette = async (req,res) => {
     method: 'GET',
     url: 'https://random-palette-generator.p.rapidapi.com/palette/1/10',
     headers: {
-      'X-RapidAPI-Key': '29fe1853ddmsh2af84e8896fb916p1d9debjsn7d07381c747d',
-      'X-RapidAPI-Host': 'random-palette-generator.p.rapidapi.com'
+      'x-rapidapi-key': '29fe1853ddmsh2af84e8896fb916p1d9debjsn7d07381c747d',
+      'x-rapidapi-host': 'random-palette-generator.p.rapidapi.com'
     }
 	};
   axios.request(options).then(function (response) {

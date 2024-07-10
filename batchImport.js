@@ -10,7 +10,7 @@ const options = {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 };
-const x=0;
+
 
 const batchImport = async () => {
 
