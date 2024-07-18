@@ -1,9 +1,15 @@
 // "use strict";
 
 const express = require("express");
+const cors = require('cors');
 
 const morgan = require("morgan");
 const PORT = 8000;
+const corsOptions = {
+  origin: 'http://localhost:3000', // Replace with your React app's URL
+  optionsSuccessStatus: 200
+};
+
 
 const {
     getRandomePalette,
@@ -15,11 +21,12 @@ const {
     savePaletteFromPicture
 } = require("./handlers");
 
-const {colorRecognize,
+const {colorRecognize,imgRecognize
     } = require("./googleVisionApI")
 
 
 express()
+.use(cors(corsOptions)) 
 .use(morgan("tiny"))
 .use(express.json({ limit: '10mb' }))
 .use(express.static("public"))
@@ -44,6 +51,7 @@ express()
 .post("/api/save-palette-from-picture", savePaletteFromPicture)
 
 .patch("/api/save-palette",saveGeneratedPalette)
+
 
 
 

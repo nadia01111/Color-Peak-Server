@@ -1,9 +1,10 @@
+
 const fs = require('fs');
 
 const items = require("./img.json");
 
 const colorRecognize = async (req,res) => {
- 
+
   const argument= req.body.ImageBase64;
   const decodeBase64Image = (dataString) => {
     var matches = dataString.match(/^data:([A-Za-z-+\/]+);base64,(.+)$/),
@@ -15,8 +16,8 @@ const colorRecognize = async (req,res) => {
       var buffer = Buffer.from(matches[2],"base64");
       return buffer;
   }
-
-const  decodedImg = decodeBase64Image(argument);
+  const  decodedImg = decodeBase64Image(argument);
+ 
 
     const vision = require('@google-cloud/vision');
 
@@ -35,6 +36,8 @@ const  decodedImg = decodeBase64Image(argument);
 }
 // colorRecognize();
 
+
+
 module.exports = {
-    colorRecognize,
+    colorRecognize
 };
