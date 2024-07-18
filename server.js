@@ -1,7 +1,10 @@
+require('dotenv').config();
+
 // "use strict";
 
 const express = require("express");
 const cors = require('cors');
+
 
 const morgan = require("morgan");
 const PORT = 8000;

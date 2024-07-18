@@ -22,7 +22,10 @@ const colorRecognize = async (req,res) => {
     const vision = require('@google-cloud/vision');
 
     // Creates a client
-    const client = new vision.ImageAnnotatorClient();
+    
+    const client = new vision.ImageAnnotatorClient({
+      keyFilename: process.env.GOOGLE_APPLICATION_CREDENTIALS
+  });
 
     // Performs property detection on the local file
     const [result] = await client.imageProperties(decodedImg);
