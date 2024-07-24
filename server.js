@@ -21,7 +21,7 @@ const {
   savePaletteFromPicture
 } = require("./handlers");
 
-const { colorRecognize, imgRecognize } = require("./googleVisionApI");
+const { colorRecognize, imgRecognize } = require("./GoogleVisionApI");
 
 const app = express();
 
