@@ -35,5 +35,11 @@
     "url": "https://github.com/nadia01111/Color-Peak-Server/issues"
   },
   "homepage": "https://github.com/nadia01111/Color-Peak-Server#readme",
-  "description": ""
+  "description": "",
+  "scripts": {
+    "start": "node server.js"
+  }
 }
+
+
+
