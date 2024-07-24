@@ -1,7 +1,6 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "proxy": "http://localhost:8000",
   "main": "server.js",
   "license": "MIT",
   "dependencies": {
@@ -14,7 +13,6 @@
     "express": "^4.18.1",
     "mongodb": "^4.8.1",
     "morgan": "^1.10.0",
-    "node": "^18.7.0",
     "pexels": "^1.3.0",
     "uuid": "^8.3.2",
     "xhr2": "^0.2.1"
@@ -26,6 +24,9 @@
     "dev": "nodemon server.js",
     "start": "node server.js"
   },
+  "engines": {
+    "node": "18.x"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nadia01111/Color-Peak-Server.git"
@@ -35,11 +36,6 @@
     "url": "https://github.com/nadia01111/Color-Peak-Server/issues"
   },
   "homepage": "https://github.com/nadia01111/Color-Peak-Server#readme",
-  "description": "",
-  "scripts": {
-    "start": "node server.js"
-  }
+  "description": ""
 }
-
-
 
