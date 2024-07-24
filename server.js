@@ -7,7 +7,7 @@ const morgan = require("morgan");
 const PORT = process.env.PORT || 8000;  // Use the port provided by Heroku
 
 const corsOptions = {
-  origin: process.env.CORS_ORIGIN || 'http://localhost:3000',  // Use environment variable for CORS origin
+  origin:'http://localhost:3000',  
   optionsSuccessStatus: 200
 };
 
